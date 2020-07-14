@@ -1,0 +1,8 @@
+$primary:       #f1f1f1 !default;
+$card-spacer-x: 5px !default;
+$gray: #f1f1f1 !default;
+
+@import './buttons';
+@import './dropdown';
+@import './helper';
+@import '~bootstrap/scss/bootstrap.scss';
