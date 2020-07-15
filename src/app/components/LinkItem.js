@@ -60,6 +60,7 @@ function LinkItem(props) {
             name={item.name}
             okAction={() => {
               dispatch(deleteLink(item.id));
+              setIsMouseInside(false);
               handleClose();
               notify();
             }}
