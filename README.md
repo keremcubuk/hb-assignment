@@ -1,68 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template. In this project, you can see the react, redux best practices and tests. 
 
-## Available Scripts
+To react the project before download. Follow this [link](https://hb-assignment.keremcubuk.now.sh/). This react app, deployed by the [now.sh or vercel](https://vercel.com/)
+
+- [HB Assignment Playground](https://hb-assignment.keremcubuk.now.sh/)
+
+## Before Start
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm install`
+
+Before starting development, you must install npm modules. To install, npm modules run this command in terminal.
+
+```shell
+npm install
+```
+
+
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+```shell
+npm start
+```
+
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+```shell
+npm test
+```
+
+### `npm build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+```shell
+npm build
+```
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This folder structure is created according to react best practices. All project files listed under `app` folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```shell
+hb-assignment
+├── app
+│   ├── components          # UI components
+│   ├── containers          # Screen components
+│   ├── data                # Dummy datas for initialize
+│   ├── images              # All app images goes here
+│   ├── redux               # Redux, Actions, Contants define under this folder
+│   ├── theme               # All SCSS files goes here
+│   └── utils               # Helper functions
+├── index.js                # Application start here
+└── serviceWorker.js        # Service Integrations
+└── setupTests.js           # Enzyme & Jest Test Integrations
+```
 
-## Learn More
+## Theme
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And also, in this project `React-Bootstrap` have been used. With this UI framework, all most all sample UI components used from `react-boootstrap`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- UI Components are created with React Bootstrap.
+- `SCSS` files listed under `theme` folder. And also, this folder is overrides the `bootstrap` theme, so that I have used `bootstrap` and `node-sass`. Thanks to `node-sass`, I override the some `scss` files. With the minimum customizing css.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## NPM Libraries
 
-### Analyzing the Bundle Size
+To create project and some screens, I have used `ready-to-use` libraries. This libraries, helps to create simple components.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [React Bootstrap](https://react-bootstrap.github.io/) - UI Framework
+- [Bootstrap](https://getbootstrap.com/) - UI Framework Stylings
+- [node-sass](https://github.com/sass/node-sass) - To enable write `SCSS` & `SASS`
+- [@primer/octicons-react](https://octicons.github.com) - Icon Library
+- [react-router-dom](https://github.com/ReactTraining/react-router#readme) - Router
+- [react-toastify](https://github.com/fkhadra/react-toastify#readme) - Toast Messages
+- Redux, React-redux, Immer - For Redux Usage
