@@ -1,3 +1,7 @@
+.container {
+  padding: 15px;
+}
+
 .divider {
   background-color: $gray;
   height: 3px;
@@ -6,9 +10,9 @@
 }
 
 .box {
-  width: 90px;
-  height: 90px;
-  background-color: $gray;
+  width: 85px;
+  height: 85px;
+  background-color: #ECECED;
   border: 1px solid darken($gray, 10%);
   border-radius: 6px;
   text-align: center;
@@ -27,6 +31,41 @@
   }
 }
 
+.box-gray {
+  background-color: #F7F7F7;
+  border: 1px solid darken($gray, 10%);
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid darken($gray, 10%);
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
 .font-medium {
   font-size: 14px;
+}
+
+.on-hover {
+  padding: 5px;
+  border: 1px solid transparent;
+  margin-left: -5px;
+  margin-right: -5px;
+
+  &:hover {
+    background-color: #F7F7F7;
+    border: 1px solid darken($gray, 10%);
+    border-radius: 6px;
+  }
+}
+
+.Toastify__toast--success {
+  background-color: #DDF9D3 !important;
+  border: 1px solid #49A831;
+  border-radius: 6px;
+  color: #49A831;
+  text-align: center;
+
+  .Toastify__close-button {
+    display: none
+  }
 }

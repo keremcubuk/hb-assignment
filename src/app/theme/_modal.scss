@@ -1,0 +1,25 @@
+.modal {
+  .modal-header {
+    padding: 0rem 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+    background-color: black;
+    color: white;
+
+    > .close {
+      color: white;
+      opacity: 1;
+      font-size: 2rem;
+    }
+  }
+
+  .modal-body,
+  .modal-footer {
+    background-color: $gray;
+  }
+  .modal-footer {
+    border: none;
+    padding-bottom: 1.5rem;
+  }
+}

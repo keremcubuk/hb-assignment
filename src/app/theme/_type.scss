@@ -1,0 +1,11 @@
+.font-huge {
+  font-size: 1.5rem;
+ 
+    > .font-weight-bolder {
+      font-weight: 900 !important;
+    }
+  
+    > .font-weight-bold {
+      font-weight: 600 !important;
+    }
+}

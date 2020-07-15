@@ -1,0 +1,33 @@
+.pagination {
+  > .page-item {
+    .page-link {
+      background-color: transparent;
+      border: none;
+      color: black;
+      font-weight: 900;
+      padding: 0.2rem 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    &.active {
+      .page-link {
+        border: 1px solid darken($gray, 10%);
+        background-color: transparent !important;
+        color: black;
+        padding: 0.1rem 0.50rem;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      > .page-link {
+        padding: 0 0.8rem 0 0.5rem;
+        line-height: 1;
+
+        > span:first-child {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

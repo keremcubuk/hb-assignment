@@ -1,57 +1,58 @@
 import React, { useState } from 'react';
-import { Row, Col, Pagination } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { sortByMostVoted, sortByLessVoted, upVote, downVote, deleteLink } from '../redux/actions'
+import { selectVoteList } from '../redux/reducer'
 
 // Custom Components
 import NewLink from '../components/NewLink';
 import DropdownFilter from '../components/DropdownFilter';
 import LinkItem from '../components/LinkItem';
-import * as data from '../data/data.json';
+import Pagination from '../components/Pagination';
 
-function VoteList() {
-  let perPage = 5;
-  let items = [];
-  let pageSize = Math.ceil(data.linkList.length / perPage)
+function VoteList(props) {
+  const dispatch = useDispatch();
+  const linkList = useSelector(selectVoteList);
+  const perPage = 5;
   const [offset, setOffset] = useState(0);
   const [activePage, setActivePage] = useState(1);
 
   const handlePaginate = (selectedPage) => {
-    console.log(selectedPage);
     setOffset((selectedPage - 1) * perPage);
     setActivePage(selectedPage);
   }
 
-  for (let number = 1; number <= pageSize; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === activePage} onClick={() => handlePaginate(number)}>
-        {number}
-      </Pagination.Item>,
-    );
-  }
-  
   return (
     <Row>
-      <Col md={{ span: 4, offset: 4 }}>
+      <Col lg={{ span: 4, offset: 4 }} sm={{ span: 8, offset: 2 }}>
         <NewLink />
 
         <div className="divider" />
 
-        <DropdownFilter />
-        {console.log('>', offset)}
-        {console.log('<', perPage)}
-        {data.linkList.slice(offset, offset + perPage).map((item, index)=> {
+        <DropdownFilter
+          sortByMostVoted={() => dispatch(sortByMostVoted())}
+          sortByLessVoted={() => dispatch(sortByLessVoted())}
+        />
+
+        {linkList?.slice(offset, offset + perPage).map((item, index)=> {
           return (
             <LinkItem
-              name={item.name}
-              point={item.point}
-              url={item.url}
-              createDate={item.createDate}
-              updateDate={item.updateDate}
+              item={item}
               key={`link-item${index}`}
+              upVote={upVote}
+              downVote={downVote}
+              deleteLink={deleteLink}
             />
           );
         })}
 
-        {data.linkList.length > 5 ? <Pagination>{items}</Pagination> : null}
+        <Pagination
+          linkList={linkList}
+          handlePaginate={handlePaginate}
+          activePage={activePage}
+          perPage={perPage}
+        />
       </Col>
     </Row>
   );

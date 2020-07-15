@@ -3,8 +3,8 @@
     background-color: $gray;
     border: 1px solid #c4c2c2;
     border-radius: 3px;
-    width: 60px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     display: flex;
     font-size: 50px;
     color: black;
@@ -25,6 +25,34 @@
 
     &:focus {
       background-color: $gray !important;
+    }
+  }
+
+  &-delete {
+    position: absolute;
+    right: -5px;
+    top: -20px;
+    background-color: red !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    line-height: 1 !important;
+    color: white !important;
+  }
+
+  &-black {
+    color: black;
+
+    &.rounded {
+      background-color: black;
+      color: white;
+      border-radius: 20px !important;
+      font-weight: 900;
+      min-width: 100px;
+
+      &:hover {
+        background-color: lighten(black, 50%);
+        color: white;
+      }
     }
   }
 }
