@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template. In this project, you can see the react, redux best practices and tests. 
 
-To react the project before download. Follow this [link](https://hb-assignment.keremcubuk.now.sh/). This react app, deployed by the [now.sh or vercel](https://vercel.com/)
+Before the download React project, you can use deployed app. This react app, deployed by the [now.sh or vercel](https://vercel.com/)
 
 - [HB Assignment Playground](https://hb-assignment.keremcubuk.now.sh/)
 
