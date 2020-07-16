@@ -52,7 +52,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Data
 
+Project dummy data firstly, created under `app/data`. Thanks to `data.json` file dummy data used by `redux` as `initialState`. After any change this data read from `localStorage`. It means, when you delete something or add. You can see all data even refresh your page or close the browser.
 
 ## Folder Structure
 
