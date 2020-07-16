@@ -6,7 +6,7 @@ function DropdownFilter(props) {
   const [selectedOption, setSelectedOption] = useState('Order By');
 
   const selectItem = (e) => {
-    if (e === 1) {
+    if (e === "1") {
       setSelectedOption("Most Voted (Z > A)");
     } else {
       setSelectedOption("Less Voted (A > Z)");
